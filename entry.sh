@@ -1,1 +1,1 @@
-./target/release/order-service
+./target/release/world-service

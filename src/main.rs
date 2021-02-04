@@ -2,16 +2,11 @@
 
 #[macro_use] extern crate rocket;
 
-#[get("/order/<item>")]
-fn order(item: String) -> String {
-    format!("Item: {}", item)
-}
-
-#[get("/order/<item>/status")]
-fn status(item: String) -> String {
-    format!("{} status", item)
+#[get("/")]
+fn world() -> String {
+    String::from("World")
 }
 
 fn main() {
-    rocket::ignite().mount("/", routes![order, status]).launch();
+    rocket::ignite().mount("/", routes![world]).launch();
 }
