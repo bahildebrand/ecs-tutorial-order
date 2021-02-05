@@ -2,7 +2,7 @@
 
 #[macro_use] extern crate rocket;
 
-#[get("/")]
+#[get("/world")]
 fn world() -> String {
     String::from("World")
 }
